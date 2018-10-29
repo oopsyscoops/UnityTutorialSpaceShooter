@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetKey(KeyCode.Space) && Time.time >= nextFire) {
 			nextFire = Time.time + fireRate;
 			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+            GetComponent<AudioSource>().Play();
 		}
 	}
 }
